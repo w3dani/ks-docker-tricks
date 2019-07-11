@@ -1,10 +1,10 @@
 ## KS - Docker tricks
 
-To load commands: 
+Load commands: 
 
-`source docker_commands``
+`source docker_commands`
 
-To run example:
+Run example:
 
 1. Uncomment function `node` in docker_commands file
 2. Run `node node/node_example.js`

@@ -1,0 +1,37 @@
+
+# Node version. Other versions available => [11.15.0, 10.15.3, 8.16.0]
+NODE_VERSION=10.15.3
+# Java version. Other versions available => [7, 8, 9, 10, 11]
+JAVA_VERSION=8
+# Gradle version. Other versions available => [5.5.0-jdk8, 4.10.3-jdk8]
+GRADLE_VERSION=5.5.0-jdk8
+
+#java(){
+#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ openjdk:$JAVA_VERSION-stretch java $@
+#}
+
+#node(){
+#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ node:$NODE_VERSION-alpine node $@
+#}
+
+#npm(){
+#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ node:$NODE_VERSION-alpine npm $@
+#}
+
+#gradle(){
+#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ gradle:$GRADLE_VERSION npm $@ 
+#}
+
+##################################################################################
+
+node8(){
+    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ node:8.16.0-alpine node $@
+}
+
+node10(){
+    docker run -v $PWD/:/opt/app/ -w /opt/app/ node:10.15.3-alpine node $@
+}
+
+node11(){
+    docker run -v $PWD/:/opt/app/ -w /opt/app/ node:11.15.0-alpine node $@
+}

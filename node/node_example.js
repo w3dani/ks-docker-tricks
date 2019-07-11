@@ -1,0 +1,1 @@
+console.log(`The current node version is ${process.version}`);

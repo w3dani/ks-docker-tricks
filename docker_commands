@@ -19,7 +19,7 @@ GRADLE_VERSION=5.5.0-jdk8
 #}
 
 #gradle(){
-#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ gradle:$GRADLE_VERSION npm $@ 
+#    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ gradle:$GRADLE_VERSION gradle $@ 
 #}
 
 ##################################################################################
@@ -29,9 +29,9 @@ node8(){
 }
 
 node10(){
-    docker run -v $PWD/:/opt/app/ -w /opt/app/ node:10.15.3-alpine node $@
+    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ node:10.15.3-alpine node $@
 }
 
 node11(){
-    docker run -v $PWD/:/opt/app/ -w /opt/app/ node:11.15.0-alpine node $@
+    docker run --rm -v $PWD/:/opt/app/ -w /opt/app/ node:11.15.0-alpine node $@
 }
